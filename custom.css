@@ -1,1 +1,210 @@
 /* CUSTOM CSS - PLACE YOUR CUSTOM OVERRIDES BELOW */
+
+#starMessageButton {
+  /* min-width: 36px !important;
+	min-height: 36px !important; */
+  /* display: block !important; */
+  /* margin-inline: 6px !important;
+	margin-block: 8px !important; */
+  /* flex-direction: column; */
+  /* min-block-size: 24px; */
+  /* min-inline-size: 32px; */
+  /* margin: 4px 1px; */
+  /* padding: 1px 5px; */
+}
+
+/* :root[uidensity="touch"] #starMessageButton{
+padding: 5px;
+} */
+
+/* ---------- ONLYICONS START ---------- */
+/* START Fix onlyicons borders (removed :not()) */
+/* Borders on message header buttons */
+#messageHeader.message-header-buttons-only-icons
+  .toolbarbutton-1.message-header-view-button:not(
+    [is="toolbarbutton-menu-button"]
+  ) {
+  border-color: #ececee !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  /* Message header button borders */
+  #messageHeader.message-header-buttons-only-icons
+    .toolbarbutton-1.message-header-view-button:not(
+      [is="toolbarbutton-menu-button"]
+    ) {
+    border-color: #1f1f1f !important;
+  }
+}
+/* END Fix onlyicons (removed :not()) */
+
+.message-header-buttons-only-icons {
+  .toolbarbutton-icon,
+  #otherActionsButton::before {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+  }
+
+  .toolbarbutton-1,
+  .toolbarbutton-menubutton-button,
+  #otherActionsButton {
+    min-width: 35px !important;
+    min-height: 35px !important;
+  }
+
+  /* #hdrReplyListButton .toolbarbutton-icon {
+		padding-right: 6px !important;
+	} */
+
+  #starMessageButton > img {
+    /* width: 20px; */
+  }
+
+  #otherActionsButton::before {
+    left: 8px !important;
+  }
+}
+
+/* NON VA, AGGIUSTA */
+/* .message-header-buttons-only-icons #hdrReplyAllButton .toolbarbutton-icon {
+	padding-right: 5px !important;
+} */
+
+/* ---------- ONLYICONS END ---------- */
+
+/* ---------- MY SHIT START ---------- */
+
+/* threads pane unread colour table view */
+#threadTree tr[data-properties~="unread"] {
+  color: #47a2e3 !important;
+}
+
+#messageHeader:not(.message-header-buttons-only-icons):not(
+    .message-header-buttons-only-text
+  ) {
+  #hdrReplyAllButton,
+  #hdrReplyListButton,
+  #otherActionsButton {
+    .toolbarbutton-text {
+      display: none !important;
+    }
+
+    .toolbarbutton-menubutton-button {
+      padding-right: 10px !important;
+    }
+  }
+
+  #otherActionsButton {
+    /* min-width: 35px !important; */
+    min-height: 35px !important;
+    padding-right: 9px !important;
+  }
+}
+
+li[aria-label="Sync Issues"],
+li[aria-label="Snoozed"],
+li[aria-label="Conversation History"],
+li[aria-label="Feed RSS"] {
+  display: none !important;
+}
+
+.infobar.animated:not([value="maybeScam"]) {
+  @media (prefers-color-scheme: dark) {
+    /* --message-bar-background-color: #5195da !important; */
+    --message-bar-background-color: #264c63 !important;
+    color: white !important;
+  }
+}
+
+/* ---------- MY SHIT END ---------- */
+
+/* #header-view-toolbar .toolbarbutton-text {
+	display: none !important;
+} */
+
+/* .message-header-view-button {
+	&[is="toolbarbutton-menu-button"] {
+		&>.toolbarbutton-menubutton-button {
+			padding-right: 12px !important;
+		}
+	}
+} */
+
+/* .message-header-view-button &[is="toolbarbutton-menu-button"] {
+		border-radius: inherit;
+	} */
+
+.message-header-wrap {
+  /* @media (max-width: 768px) { */
+  &:not([hidden]) {
+    /* display: flex !important; */
+    /* flex-direction: column !important; */
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    /* gap: 5px !important; */
+  }
+
+  /* } */
+}
+
+.message-header-wrap {
+  &:not([hidden]) {
+    /* display: flex !important; */
+    /* flex-direction: column !important; */
+    flex-direction: row-reverse !important;
+    align-items: flex-start !important;
+    /* gap: 5px !important; */
+  }
+}
+
+/* .header-buttons-container {
+  @media (max-width: 768px) {
+      align-self: unset !important;
+  }
+} */
+
+/* threads pane unread colour table view */
+#threadTree tr[data-properties~="unread"] {
+  color: #47a2e3 !important;
+}
+
+/* Define var x */
+.infobar.animated:not([value="maybeScam"]) {
+  --message-bar-background-color: #e6f2fa !important;
+}
+
+/* .message-header-buttons-only-icons .toolbarbutton-text, .message-header-buttons-only-text .toolbarbutton-icon */
+
+.message-header-buttons-only-icons .toolbarbutton-icon,
+.message-header-buttons-only-icons #otherActionsButton::before {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+/* #otherActionsButton {
+  padding-left: 26px !important;
+} */
+
+#otherActionsButton .toolbarbutton-text {
+  display: none !important;
+}
+
+#unifiedToolbar {
+  padding-block: 0px !important;
+}
+
+#attachmentView,
+#attachmentBar {
+  order: -1 !important;
+  background-color: #00579c !important;
+}
+
+#replywithheader_myjeeva_com-messageDisplayAction-toolbarbutton {
+  display: none !important;
+}
+
+tree-view[data-show-grouped-by-sort="true"] .card-layout.children *,
+tree-view[data-show-grouped-by-sort="true"] .card-layout.children:hover,
+tree-view[data-show-grouped-by-sort="true"] .card-layout.children :hover {
+  background-color: #1e1e1e !important;
+}
