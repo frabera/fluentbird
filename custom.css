@@ -208,3 +208,14 @@ tree-view[data-show-grouped-by-sort="true"] .card-layout.children:hover,
 tree-view[data-show-grouped-by-sort="true"] .card-layout.children :hover {
   background-color: #1e1e1e !important;
 }
+
+/* REORDER CONTACTS AND CALENDAR */
+#mailButton,
+#calendarButton,
+#tasksButton {
+  order: -1;
+}
+#addressBookButton,
+#chatButton {
+  order: 1;
+}
