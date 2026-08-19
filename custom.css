@@ -1,4 +1,63 @@
 /* CUSTOM CSS - PLACE YOUR CUSTOM OVERRIDES BELOW */
+/* Put the reply button, subject and icons on one line */
+/* Thread card: button + subject on one line */
+#threadTree[rows="thread-card"] .thread-card-dynamic-row {
+  display: grid !important;
+  grid-template:
+    "button subject info"
+    / auto 1fr auto !important;
+
+  align-items: center !important;
+  column-gap: 4px !important;
+  row-gap: 0 !important;
+
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+#threadTree[rows="thread-card"] .thread-card-button {
+  grid-area: button !important;
+  align-self: center !important;
+  margin: 0 !important;
+}
+
+#threadTree[rows="thread-card"] .thread-card-subject-container {
+  grid-area: subject !important;
+  min-width: 0 !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  align-self: center !important;
+}
+
+#threadTree[rows="thread-card"] .thread-card-icon-info {
+  grid-area: info !important;
+  display: flex !important;
+  align-items: center !important;
+  align-self: center !important;
+  justify-self: end !important;
+  gap: 2px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#threadTree[rows="thread-card"] .thread-card-icon-info > * {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Subject indent for child rows with replies */
+tr.children
+  .thread-card-button:has(.thread-replies[data-l10n-id])
+  ~ .thread-card-subject-container
+  .subject {
+  margin-left: unset !important;
+  /* not working */
+}
+
+.thread-card-row .account-indicator {
+  margin-top: 10px !important;
+}
 
 #starMessageButton {
   /* min-width: 36px !important;

@@ -5,7 +5,7 @@
 
 /* =====================================================
    CUSTOM OVERRIDES
-   If you want to make your own tweaks, you can 
+   If you want to make your own tweaks, you can
    place your own CSS in a file named:
        custom.css
    in the same folder as this file.
@@ -292,10 +292,10 @@
 
 /* Tag folder icons — covers ALL tags including custom ones */
 #folderTree li[data-tag-key] > .container > .icon {
-    display: block !important; 
+    display: block !important;
     width: 16px !important;
     height: 16px !important;
-    background-color: var(--icon-color) !important; 
+    background-color: var(--icon-color) !important;
     mask-image: url("Icons/ic_fluent_tag_24_filled.svg") !important;
     mask-repeat: no-repeat !important;
     mask-size: 16px 16px !important;
@@ -402,7 +402,7 @@ button .thread-replies {
 
 /* Subject indent for child rows with replies */
 tr.children .thread-card-button:has(.thread-replies[data-l10n-id]) ~ .thread-card-subject-container .subject {
-	margin-left: 15px !important;
+	/* margin-left: 15px !important; */
 }
 
 /* Card layout spacing */
@@ -974,11 +974,11 @@ global-search-bar {
 	}
 
 	/* Make unread messages text lighter */
-	
+
 	.unread > .container > .unread-count {
 	color: #7cb8fa !important;
 	}
-	
+
 	#placeholderNoMessages::before {
 		background-image: url("Icons/mail-dark.svg") !important;
 	}
