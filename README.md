@@ -30,9 +30,10 @@ There may be some bugs and issues, specifically when using operating systems oth
 If reporting an issue, please use the report templates, including the OS and version you're using, the version of Thunderbird, and any specific settings related to the bug. 
 Thanks!
 
-1.1.3 Release Notes
+1.1.4 Release Notes
 --------
-- Fix card spacing in 2-row view
+- Fixes missing search folder icons with a new fluent icon
+- Fixes missing "twisty" icons on date sort headers
 
 Credits
 --------
